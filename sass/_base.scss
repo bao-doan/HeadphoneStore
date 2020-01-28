@@ -13,3 +13,38 @@
 // FONT VARIABLES
 $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px / 16px = 62.5% --> 1rem = 10px
+}
+
+body {
+  font-family: $font-primary;
+}
+
+.container {
+  display: grid;
+
+  grid-template-rows:
+    [header-start] min-content [header-end section-start] 95vh [section-end ] repeat(
+      2,
+      [row-start] 1fr [row-end]
+    )
+    [function-start] 80vh [function-end store-start] 1fr [store-end email-start] min-content [email-end contact-start] min-content [contact-end];
+
+  grid-template-columns:
+    [full-start] 1fr [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] 1fr [full-end];
+}
