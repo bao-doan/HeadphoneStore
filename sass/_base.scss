@@ -47,4 +47,19 @@ body {
       [col-start] minmax(min-content, 14rem) [col-end]
     )
     [center-end] 1fr [full-end];
+
+  //   overflow-x: hidden;
+}
+
+.background-top {
+  //   z-index: -1;
+  //   background: rgb(238, 174, 202);
+  background: linear-gradient(
+    270deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 15%,
+    rgba(255, 255, 255, 1) 74%
+  );
+  grid-column: full-start/ full-end;
+  grid-row: header-start/section-end;
 }
