@@ -13,7 +13,9 @@
   justify-content: center;
   align-items: center;
 
-  padding: 10rem 20rem;
+  padding: 5rem 20rem 10rem 20rem;
+  // margin-bottom: 5rem;
+  // margin: 5rem 0;
 
   &__description {
     // margin-right: 4rem;
@@ -72,7 +74,9 @@
 
       background-color: white;
       box-shadow: 0 30px 80px 10px rgba($color: #000000, $alpha: 0.3);
-
+      &:focus {
+        outline: none;
+      }
       &::placeholder {
         color: rgb(206, 192, 192);
       }
@@ -89,6 +93,9 @@
       top: 0.3rem;
       left: 25.6rem;
       cursor: pointer;
+      &:focus {
+        outline: none;
+      }
     }
 
     &--icon {

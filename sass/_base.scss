@@ -35,7 +35,7 @@ body {
   display: grid;
 
   grid-template-rows:
-    [header-start] min-content [header-end section-start] 95vh [section-end ] repeat(
+    [header-start] min-content [header-end section-start] max-content [section-end ] repeat(
       2,
       [row-start] 1fr [row-end]
     )
@@ -61,5 +61,5 @@ body {
     rgba(255, 255, 255, 1) 74%
   );
   grid-column: full-start/ full-end;
-  grid-row: header-start/section-end;
+  grid-row: header-start/function-end;
 }
