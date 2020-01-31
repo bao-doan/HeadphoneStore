@@ -1,5 +1,179 @@
 .color {
-  background-color: skyblue;
-  grid-row: row-start 2 / row-end 2;
+  // background-color: skyblue;
+  grid-row: color-start / color-end;
   grid-column: center-start / center-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 6rem;
+  &__image {
+    width: 40%;
+    margin-left: 10rem;
+  }
+
+  &__slider {
+    height: 60vh;
+    margin-right: 4rem;
+    -webkit-appearance: slider-vertical;
+
+    // Makeup the track
+    &::-webkit-slider-runnable-track {
+      width: 2rem;
+      background: linear-gradient(
+        22deg,
+        rgba(255, 189, 6, 1) 9%,
+        rgba(127, 7, 247, 1) 51%,
+        rgba(213, 181, 181, 1) 88%
+      );
+      cursor: pointer;
+      border-radius: 100px;
+      box-shadow: 0 30px 80px 10px rgba($color: #000000, $alpha: 0.2);
+    }
+
+    &::-moz-range-track {
+      height: 62vh;
+      width: 2rem;
+      background: linear-gradient(
+        22deg,
+        rgba(255, 189, 6, 1) 9%,
+        rgba(127, 7, 247, 1) 51%,
+        rgba(213, 181, 181, 1) 88%
+      );
+      cursor: pointer;
+      border-radius: 100px;
+      box-shadow: 0 30px 80px 10px rgba($color: #000000, $alpha: 0.2);
+    }
+
+    // Make up the thumb
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none !important;
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+      border: 1px solid #000000;
+      height: 16px;
+      width: 36px;
+      border-radius: 3px;
+      background: #ffffff;
+      cursor: pointer;
+    }
+
+    &::-moz-range-thumb {
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+      border: 1rem solid white;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      background-color: transparent;
+      // opacity: 0.1;
+      cursor: pointer;
+    }
+  }
+
+  &__selecter {
+    width: 35%;
+    // margin-bottom: 20rem;
+    margin-left: auto;
+    // margin-right: -1rem;
+  }
+  &__picker {
+    width: 80%;
+    height: 6rem;
+    background-color: whitesmoke;
+    border-radius: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    box-shadow: 0 30px 80px 10px rgba($color: #000000, $alpha: 0.2);
+    margin-bottom: 4rem;
+  }
+  &__circle {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+
+    &--1 {
+      background: linear-gradient(
+        270deg,
+        rgba(238, 174, 202, 1) 0%,
+        rgba(255, 255, 255, 1) 60%,
+        rgba(148, 187, 233, 1) 30%
+      );
+    }
+    &--2 {
+      background: linear-gradient(
+        270deg,
+        #f2913d 20%,
+        rgba(7, 117, 247, 1) 71%
+      );
+    }
+    &--3 {
+      background: linear-gradient(
+        270deg,
+        rgba(255, 189, 6, 1) 9%,
+        rgba(127, 7, 247, 1) 51%,
+        rgba(213, 181, 181, 1) 88%
+      );
+    }
+  }
+
+  &__collection {
+    background-color: white;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 0 30px 80px 10px rgba($color: #000000, $alpha: 0.2);
+
+    &--name {
+      line-height: 1.2;
+      font-size: 4rem;
+
+      &-1 {
+        font-family: "Bangers", cursive;
+        color: #f2913d;
+      }
+
+      &-2 {
+        font-weight: 900;
+        color: rgba(7, 117, 247, 1);
+        font-family: "Sigmar One", cursive;
+      }
+
+      &-3 {
+        font-size: 5rem;
+        color: rgba(127, 7, 247, 1);
+        font-family: "Bangers", cursive;
+        margin-bottom: 2rem;
+      }
+    }
+    &--des {
+      font-size: 1.3rem;
+      margin-bottom: 3rem;
+    }
+
+    &--btn {
+      border: none;
+      font-size: 2rem;
+      color: rgba(7, 117, 247, 1);
+      text-transform: uppercase;
+      padding-bottom: 1rem;
+      background-color: white;
+      cursor: pointer;
+      &::after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        height: 1.5px;
+        background-color: rgba(127, 7, 247, 1);
+        margin-top: 1.5rem;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
 }

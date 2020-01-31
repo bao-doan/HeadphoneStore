@@ -1,11 +1,121 @@
 .color {
-  background-color: skyblue;
-  grid-row: row-start 2 / row-end 2;
-  grid-column: center-start / center-end; }
+  grid-row: color-start / color-end;
+  grid-column: center-start / center-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 6rem; }
+  .color__image {
+    width: 40%;
+    margin-left: 10rem; }
+  .color__slider {
+    height: 60vh;
+    margin-right: 4rem;
+    -webkit-appearance: slider-vertical; }
+    .color__slider::-webkit-slider-runnable-track {
+      width: 2rem;
+      background: linear-gradient(22deg, #ffbd06 9%, #7f07f7 51%, #d5b5b5 88%);
+      cursor: pointer;
+      border-radius: 100px;
+      box-shadow: 0 30px 80px 10px rgba(0, 0, 0, 0.2); }
+    .color__slider::-moz-range-track {
+      height: 62vh;
+      width: 2rem;
+      background: linear-gradient(22deg, #ffbd06 9%, #7f07f7 51%, #d5b5b5 88%);
+      cursor: pointer;
+      border-radius: 100px;
+      box-shadow: 0 30px 80px 10px rgba(0, 0, 0, 0.2); }
+    .color__slider::-webkit-slider-thumb {
+      -webkit-appearance: none !important;
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+      border: 1px solid #000000;
+      height: 16px;
+      width: 36px;
+      border-radius: 3px;
+      background: #ffffff;
+      cursor: pointer; }
+    .color__slider::-moz-range-thumb {
+      box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+      border: 1rem solid white;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+      background-color: transparent;
+      cursor: pointer; }
+  .color__selecter {
+    width: 35%;
+    margin-left: auto; }
+  .color__picker {
+    width: 80%;
+    height: 6rem;
+    background-color: whitesmoke;
+    border-radius: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 2rem;
+    box-shadow: 0 30px 80px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 4rem; }
+  .color__circle {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%; }
+    .color__circle--1 {
+      background: linear-gradient(270deg, #eeaeca 0%, white 60%, #94bbe9 30%); }
+    .color__circle--2 {
+      background: linear-gradient(270deg, #f2913d 20%, #0775f7 71%); }
+    .color__circle--3 {
+      background: linear-gradient(270deg, #ffbd06 9%, #7f07f7 51%, #d5b5b5 88%); }
+  .color__collection {
+    background-color: white;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 0 30px 80px 10px rgba(0, 0, 0, 0.2); }
+    .color__collection--name {
+      line-height: 1.2;
+      font-size: 4rem; }
+      .color__collection--name-1 {
+        font-family: "Bangers", cursive;
+        color: #f2913d; }
+      .color__collection--name-2 {
+        font-weight: 900;
+        color: #0775f7;
+        font-family: "Sigmar One", cursive; }
+      .color__collection--name-3 {
+        font-size: 5rem;
+        color: #7f07f7;
+        font-family: "Bangers", cursive;
+        margin-bottom: 2rem; }
+    .color__collection--des {
+      font-size: 1.3rem;
+      margin-bottom: 3rem; }
+    .color__collection--btn {
+      border: none;
+      font-size: 2rem;
+      color: #0775f7;
+      text-transform: uppercase;
+      padding-bottom: 1rem;
+      background-color: white;
+      cursor: pointer; }
+      .color__collection--btn::after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        height: 1.5px;
+        background-color: #7f07f7;
+        margin-top: 1.5rem; }
+      .color__collection--btn:focus {
+        outline: none; }
 
 .design {
   grid-column: center-start / center-end;
-  grid-row: row-start 1 / row-end 1;
+  grid-row: design-start / design-end;
   margin: 0rem 0 5rem 15rem;
   width: 80%;
   display: flex;
@@ -292,7 +402,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: [header-start] min-content [header-end section-start] max-content [section-end] repeat(2, [row-start] 1fr [row-end]) [function-start] 80vh [function-end store-start] 1fr [store-end email-start] min-content [email-end contact-start] min-content [contact-end];
+  grid-template-rows: [header-start] min-content [header-end section-start] max-content [section-end design-start] min-content [design-end color-start] 1fr [color-end function-start] 80vh [function-end store-start] 1fr [store-end email-start] min-content [email-end contact-start] min-content [contact-end];
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
 
 .background-top {
