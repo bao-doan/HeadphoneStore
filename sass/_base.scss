@@ -35,8 +35,8 @@ body {
   display: grid;
 
   grid-template-rows:
-    [header-start] min-content [header-end section-start] max-content [section-end design-start] min-content [design-end color-start] 1fr
-    [color-end function-start] 1fr [function-end store-start] 1fr [store-end email-start] min-content [email-end contact-start] min-content [contact-end];
+    [header-start] min-content [header-end section-start] max-content [section-end design-start] min-content [design-end color-start] max-content
+    [color-end function-start] max-content [function-end store-start] max-content [store-end email-start] min-content [email-end contact-start] min-content [contact-end];
 
   grid-template-columns:
     [full-start] 1fr [center-start] repeat(
@@ -61,5 +61,5 @@ body {
     rgba(255, 255, 255, 1) 74%
   );
   grid-column: full-start/ full-end;
-  grid-row: header-start/function-end;
+  grid-row: 1/-1;
 }

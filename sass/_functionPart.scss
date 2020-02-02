@@ -5,6 +5,7 @@
     rgba(7, 147, 247, 1) 51%,
     rgba(1, 234, 255, 1) 82%
   );
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
   grid-column: full-start / full-end;
   grid-row: function-start / function-end;
 

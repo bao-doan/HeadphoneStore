@@ -1,5 +1,276 @@
 .store {
-  background-color: slategrey;
+  background-color: white;
   grid-row: store-start / store-end;
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
+  // margin: 4rem 0rem;
+  padding: 5rem 10rem;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6rem;
+
+    &--title {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", serif;
+      font-size: 6.5rem;
+      line-height: 1;
+      color: rgba(7, 117, 247, 1);
+      font-weight: 900;
+    }
+  }
+
+  &__move {
+    display: flex;
+    box-shadow: 0 30px 80px 10px rgba($color: #000000, $alpha: 0.3);
+
+    &--icon {
+      // border-radius: 100px;
+      padding: 1rem 3.5rem;
+      background: red;
+      font-size: 3rem;
+      &__backward {
+        background: rgba(7, 117, 247, 1);
+        color: white;
+        border-bottom-left-radius: 7px;
+        border-top-left-radius: 7px;
+        cursor: pointer;
+      }
+
+      &__forward {
+        cursor: pointer;
+        background: white;
+        color: rgba(7, 117, 247, 1);
+        border-bottom-right-radius: 7px;
+        border-top-right-radius: 7px;
+      }
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 5rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  &__card {
+    &--container {
+      width: 25rem;
+      height: 25rem;
+      background: red;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 30px 80px 10px rgba($color: #000000, $alpha: 0.3);
+      margin-bottom: 3rem;
+
+      &--1 {
+        background: linear-gradient(
+          0deg,
+          rgba(34, 193, 195, 1) 0%,
+          rgba(253, 187, 45, 1) 100%
+        );
+      }
+      &--2 {
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 35%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+      &--3 {
+        background: radial-gradient(
+          circle,
+          rgba(63, 94, 251, 1) 0%,
+          rgba(252, 70, 107, 1) 100%
+        );
+      }
+      &--4 {
+        background: linear-gradient(
+          22deg,
+          rgba(63, 70, 194, 1) 18%,
+          rgba(7, 147, 247, 1) 51%,
+          rgba(1, 234, 255, 1) 82%
+        );
+      }
+      &--5 {
+        background: linear-gradient(
+          22deg,
+          rgba(143, 63, 194, 1) 18%,
+          rgba(7, 247, 61, 1) 51%,
+          rgba(243, 255, 1, 1) 82%
+        );
+      }
+      &--6 {
+        background: linear-gradient(
+          22deg,
+          rgba(63, 172, 194, 1) 18%,
+          rgba(186, 7, 247, 1) 51%,
+          rgba(255, 1, 1, 1) 82%
+        );
+      }
+    }
+
+    &--image {
+      width: 90%;
+      position: absolute;
+      top: -5.3rem;
+      left: -0.5rem;
+    }
+
+    &--icon {
+      position: absolute;
+      top: -2rem;
+      left: 20rem;
+      color: white;
+      font-size: 2.5rem;
+      // padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 7rem;
+      height: 7rem;
+      background-color: red;
+      border-radius: 50%;
+      border: 7px solid white;
+      cursor: pointer;
+      // text-align: center;
+      &--1 {
+        background: linear-gradient(
+          0deg,
+          rgba(34, 193, 195, 1) 0%,
+          rgba(253, 187, 45, 1) 100%
+        );
+      }
+      &--2 {
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 9, 121, 1) 35%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+      &--3 {
+        background: radial-gradient(
+          circle,
+          rgba(63, 94, 251, 1) 0%,
+          rgba(252, 70, 107, 1) 100%
+        );
+      }
+      &--4 {
+        background: linear-gradient(
+          22deg,
+          rgba(63, 70, 194, 1) 18%,
+          rgba(7, 147, 247, 1) 51%,
+          rgba(1, 234, 255, 1) 82%
+        );
+      }
+      &--5 {
+        background: linear-gradient(
+          22deg,
+          rgba(143, 63, 194, 1) 18%,
+          rgba(7, 247, 61, 1) 51%,
+          rgba(243, 255, 1, 1) 82%
+        );
+      }
+      &--6 {
+        background: linear-gradient(
+          22deg,
+          rgba(63, 172, 194, 1) 18%,
+          rgba(186, 7, 247, 1) 51%,
+          rgba(255, 1, 1, 1) 82%
+        );
+      }
+    }
+
+    &--price {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 900;
+      // color: #f2913d;
+      margin-bottom: 1.5rem;
+
+      &--1 {
+        color: rgba(253, 187, 45, 1);
+        &::before {
+          content: "";
+          display: block;
+          margin: 0 auto;
+          width: 45%;
+          height: 3px;
+          background-color: rgba(253, 187, 45, 1);
+          border-radius: 100px;
+          margin-bottom: 1.5rem;
+        }
+      }
+      &--6 {
+        color: rgba(255, 1, 1, 1);
+        &::before {
+          content: "";
+          display: block;
+          margin: 0 auto;
+          width: 45%;
+          height: 3px;
+          background-color: rgba(255, 1, 1, 1);
+          border-radius: 100px;
+          margin-bottom: 1.5rem;
+        }
+      }
+      &--2 {
+        color: rgba(0, 212, 255, 1);
+        &::before {
+          content: "";
+          display: block;
+          margin: 0 auto;
+          width: 45%;
+          height: 3px;
+          background-color: rgba(0, 212, 255, 1);
+          border-radius: 100px;
+          margin-bottom: 1.5rem;
+        }
+      }
+      &--3 {
+        color: rgba(252, 70, 107, 1);
+        &::before {
+          content: "";
+          display: block;
+          margin: 0 auto;
+          width: 45%;
+          height: 3px;
+          background-color: rgba(252, 70, 107, 1);
+          border-radius: 100px;
+          margin-bottom: 1.5rem;
+        }
+      }
+      &--4 {
+        color: rgba(1, 234, 255, 1);
+        &::before {
+          content: "";
+          display: block;
+          margin: 0 auto;
+          width: 45%;
+          height: 3px;
+          background-color: rgba(1, 234, 255, 1);
+          border-radius: 100px;
+          margin-bottom: 1.5rem;
+        }
+      }
+      &--5 {
+        color: rgba(143, 63, 194, 1);
+        &::before {
+          content: "";
+          display: block;
+          margin: 0 auto;
+          width: 45%;
+          height: 3px;
+          background-color: rgba(143, 63, 194, 1);
+          border-radius: 100px;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
 }
