@@ -4,7 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 6rem; }
+  margin: 0 6rem;
+  margin-bottom: 3rem; }
   .color__image {
     width: 40%;
     margin-left: 10rem; }
@@ -233,7 +234,85 @@
 .email {
   background-color: white;
   grid-row: email-start / email-end;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden; }
+  .email__image {
+    position: absolute;
+    width: 50%;
+    top: -14rem;
+    left: 20%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%) invert(100%);
+    opacity: 0.2; }
+  .email__title {
+    margin-top: 7rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", serif;
+    font-size: 6rem;
+    font-weight: 900;
+    color: #0775f7;
+    z-index: 100;
+    margin-bottom: 4rem; }
+  .email__input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    align-self: stretch; }
+  .email__name {
+    position: relative; }
+    .email__name--input {
+      width: 30rem;
+      padding: 2rem 0 2rem 5rem;
+      border-radius: 100px;
+      border: none;
+      box-shadow: 0 30px 80px 10px rgba(0, 0, 0, 0.4); }
+      .email__name--input:focus {
+        outline: none; }
+      .email__name--input::placeholder {
+        color: #cec0c0;
+        font-size: 1.5rem; }
+    .email__name--icon {
+      position: absolute;
+      font-size: 1.7rem;
+      color: #cec0c0;
+      top: 1.5rem;
+      left: 2rem; }
+  .email__e {
+    margin-left: 3rem;
+    position: relative; }
+    .email__e--input {
+      width: 40rem;
+      padding: 2rem 0 2rem 5rem;
+      border-radius: 100px;
+      border: none;
+      box-shadow: 0 30px 80px 10px rgba(0, 0, 0, 0.4); }
+      .email__e--input:focus {
+        outline: none; }
+      .email__e--input::placeholder {
+        color: #cec0c0;
+        font-size: 1.5rem; }
+    .email__e--icon {
+      position: absolute;
+      font-size: 1.7rem;
+      color: #cec0c0;
+      top: 1.5rem;
+      left: 2rem; }
+    .email__e--btn {
+      padding: 1.6rem 3.5rem;
+      font-size: 1.5rem;
+      border-radius: 150px;
+      background-color: #3f46c2;
+      color: white;
+      position: absolute;
+      cursor: pointer;
+      border: none;
+      top: 0.3rem;
+      left: 29rem; }
 
 .function {
   background: linear-gradient(22deg, #3f46c2 18%, #0793f7 51%, #01eaff 82%);
@@ -479,7 +558,7 @@
     margin-bottom: 6rem; }
     .store__header--title {
       font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", serif;
-      font-size: 6.5rem;
+      font-size: 6rem;
       line-height: 1;
       color: #0775f7;
       font-weight: 900; }
@@ -635,9 +714,55 @@
         margin-bottom: 1.5rem; }
 
 .contact {
-  background-color: teal;
+  background: linear-gradient(22deg, #3f46c2 18%, #0793f7 51%, #01eaff 82%);
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
   grid-row: contact-start / contact-end;
-  grid-column: full-start/ full-end; }
+  grid-column: full-start/ full-end;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #f3f3f3; }
+  .contact__title {
+    margin-top: 7rem;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 1.3rem; }
+  .contact__list {
+    list-style: none;
+    display: flex;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 2rem; }
+  .contact__link {
+    margin-right: 3rem; }
+  .contact__copyright {
+    font-size: 1.3rem;
+    margin-bottom: 2rem; }
+  .contact__social {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .contact__socialLink {
+    font-size: 3rem;
+    color: #cecdcd;
+    margin-right: 4rem; }
+    .contact__socialLink--twitter {
+      transition: all 0.2s; }
+      .contact__socialLink--twitter:hover {
+        color: #00c7ee; }
+    .contact__socialLink--linkedin {
+      transition: all 0.2s; }
+      .contact__socialLink--linkedin:hover {
+        color: #0e76a8; }
+    .contact__socialLink--facebook {
+      transition: all 0.2s; }
+      .contact__socialLink--facebook:hover {
+        color: #3b5998; }
 
 *,
 *::before,
@@ -655,7 +780,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: [header-start] min-content [header-end section-start] max-content [section-end design-start] min-content [design-end color-start] max-content [color-end function-start] max-content [function-end store-start] max-content [store-end email-start] min-content [email-end contact-start] min-content [contact-end];
+  grid-template-rows: [header-start] min-content [header-end section-start] max-content [section-end design-start] min-content [design-end color-start] max-content [color-end function-start] max-content [function-end store-start] max-content [store-end email-start] 70vh [email-end contact-start] max-content [contact-end];
   grid-template-columns: [full-start] 1fr [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
 
 .margin-bottom {
@@ -664,4 +789,7 @@ body {
 .background-top {
   background: linear-gradient(270deg, #eeaeca 0%, #94bbe9 15%, white 74%);
   grid-column: full-start/ full-end;
-  grid-row: 1/-1; }
+  grid-row: header-start/function-end; }
+
+.orange {
+  color: #f2913d; }

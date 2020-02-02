@@ -2,4 +2,113 @@
   background-color: white;
   grid-row: email-start / email-end;
   grid-column: full-start / full-end;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  // padding-top: 10rem;
+
+  &__image {
+    // width: 100%;
+    // height: 100%;
+    position: absolute;
+    width: 50%;
+    top: -14rem;
+    left: 20%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%) invert(100%);
+    opacity: 0.2;
+  }
+
+  &__title {
+    margin-top: 7rem;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", serif;
+    font-size: 6rem;
+    font-weight: 900;
+    color: rgba(7, 117, 247, 1);
+    z-index: 100;
+    margin-bottom: 4rem;
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    align-self: stretch;
+  }
+  &__name {
+    // width: 100%;
+    // padding: 2rem 0 2rem 5rem;
+    position: relative;
+    &--input {
+      width: 30rem;
+      padding: 2rem 0 2rem 5rem;
+      border-radius: 100px;
+      border: none;
+      box-shadow: 0 30px 80px 10px rgba($color: #000000, $alpha: 0.4);
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: rgb(206, 192, 192);
+        font-size: 1.5rem;
+      }
+    }
+
+    &--icon {
+      position: absolute;
+      font-size: 1.7rem;
+      color: rgb(206, 192, 192);
+      top: 1.5rem;
+      left: 2rem;
+    }
+  }
+
+  &__e {
+    margin-left: 3rem;
+    position: relative;
+    &--input {
+      width: 40rem;
+      padding: 2rem 0 2rem 5rem;
+      border-radius: 100px;
+      border: none;
+      box-shadow: 0 30px 80px 10px rgba($color: #000000, $alpha: 0.4);
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: rgb(206, 192, 192);
+        font-size: 1.5rem;
+      }
+    }
+    &--icon {
+      position: absolute;
+      font-size: 1.7rem;
+      color: rgb(206, 192, 192);
+      top: 1.5rem;
+      left: 2rem;
+    }
+
+    &--btn {
+      padding: 1.6rem 3.5rem;
+      font-size: 1.5rem;
+      border-radius: 150px;
+      background-color: #3f46c2;
+      color: white;
+      position: absolute;
+      cursor: pointer;
+      border: none;
+      top: 0.3rem;
+      left: 29rem;
+    }
+  }
 }
